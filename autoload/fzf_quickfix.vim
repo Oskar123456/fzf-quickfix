@@ -75,7 +75,7 @@ function! fzf_quickfix#run() abort " {{{
   let l:opts = {
         \ 'source': s:get_quickfix_errors(),
         \ 'sink': function('s:error_handler'),
-        \ 'options': '--prompt="Error> "'
+        \ 'options': ['--prompt="Error>"', '--tac']
         \ }
   call fzf#run(fzf#wrap(l:opts))
 
